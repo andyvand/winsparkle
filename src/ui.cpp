@@ -101,7 +101,7 @@ wxIcon LoadNamedIcon(HMODULE module, const wchar_t *iconName, int size)
 {
     HICON hIcon = NULL;
 
-    HRESULT (*f_LoadIconWithScaleDown)(HINSTANCE, PCWSTR, int, int, HICON *) = (HRESULT(*)(
+    HRESULT (WINAPI *f_LoadIconWithScaleDown)(HINSTANCE, PCWSTR, int, int, HICON *) = (HRESULT(WINAPI *)(
         HINSTANCE,
         PCWSTR,
         int,
@@ -1225,7 +1225,7 @@ bool App::OnInit()
     }
     else if (langset.langid != 0)
     {
-        int (*f_LCIDToLocaleName)(LCID, LPWSTR, int, DWORD) = (int (*)(
+        int (WINAPI *f_LCIDToLocaleName)(LCID, LPWSTR, int, DWORD) = (int (WINAPI *)(
             LCID,
             LPWSTR,
             int,

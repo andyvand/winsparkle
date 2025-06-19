@@ -104,9 +104,9 @@ std::wstring MakeUserAgent()
     userAgent += L" (Win64)";
 #else
     // If we're running a 32bit process, check if we're on 64bit Windows OS:
-    BOOL (*f_IsWow64Process)(
+    BOOL (WINAPI *f_IsWow64Process)(
       HANDLE,
-      PBOOL)  = (BOOL (*)(HANDLE, PBOOL))LOAD_DYNAMIC_FUNC(IsWow64Process, kernel32);
+      PBOOL)  = (BOOL (WINAPI *)(HANDLE, PBOOL))LOAD_DYNAMIC_FUNC(IsWow64Process, kernel32);
     if( f_IsWow64Process )
     {
         BOOL wow64 = FALSE;
