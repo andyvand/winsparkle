@@ -308,9 +308,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>ed25519.lib;libcrypto.lib;wxbase33u.lib;wxmsw33u_webview.lib;wxmsw33u_core.lib;wxbase33u_xml.lib;wxmsw33u_html.lib;wxbase33u.lib;kernel32.lib;ws2_32.lib;gdi32.lib;uxtheme.lib;ole32.lib;oleaut32.lib;uuid.lib;gdiplus.lib;wininet.lib;nanosvgrast.lib;tiff.lib;nanosvg.lib;zlib.lib;comctl32.lib;libexpatMT.lib;oleacc.lib;winspool.lib;msimg32.lib;user32.lib;comctl32.lib;kernel32.lib;user32.lib;rpcrt4.lib;version.lib;wininet.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ed25519.lib;libcrypto.lib;c:\vcpkg\installed\arm64-windows-static\lib\wxbase33u.lib;wxmsw33u_webview.lib;wxmsw33u_core.lib;wxbase33u_xml.lib;wxmsw33u_html.lib;wxbase33u.lib;kernel32.lib;ws2_32.lib;gdi32.lib;uxtheme.lib;ole32.lib;oleaut32.lib;uuid.lib;gdiplus.lib;wininet.lib;nanosvgrast.lib;tiff.lib;nanosvg.lib;c:\vcpkg\installed\arm64-windows-static\lib\zlib.lib;c:\vcpkg\installed\arm64-windows-static\lib\pcre2-32.lib;comctl32.lib;libexpatMT.lib;oleacc.lib;c:\vcpkg\installed\arm64-windows-static\lib\libpng16.lib;winspool.lib;msimg32.lib;user32.lib;rpcrt4.lib;version.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalOptions>/LIBPATH:c:\vcpkg\installed\arm64-windows-static\lib /NODEFAULTLIB:MSVCRT %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/LIBPATH:c:\vcpkg\installed\arm64-windows-static\lib %(AdditionalOptions)</AdditionalOptions>
       <MapExports>true</MapExports>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <ModuleDefinitionFile>WinSparkle.def</ModuleDefinitionFile>

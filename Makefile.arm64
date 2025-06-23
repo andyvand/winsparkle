@@ -1,0 +1,36 @@
+# GCC makefile for WinSparkle
+# Copyright (C) 2015, 2016 Renato Silva
+# This file is licensed under the same terms as WinSparkle
+
+CC = "c:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\Hostarm64\arm64\cl.exe"
+
+all: static dll
+
+translations.res:
+	for file in translations/*.po  do\
+		msgfmt $$file -o "$${file/%po/mo}"  \
+	done
+	rc -fo translations.res translations/translations.rc
+
+winsparkle.res:
+	rc -i include -fo winsparkle.res src/winsparkle.rc
+
+objects:
+	$(CC) -Os -std:c++17 -EHsc -c -Iinclude -I/c/vcpkg/installed/x86-windows-static/include -I. -D_WIN32_WINNT=0x501 -DUNICODE -D_UNICODE -DBUILDING_WIN_SPARKLE src/appcast.cpp          -I../include
+	$(CC) -Os -std:c++17 -EHsc -c -Iinclude -I/c/vcpkg/installed/x86-windows-static/include -I. -D_WIN32_WINNT=0x501 -DUNICODE -D_UNICODE -DBUILDING_WIN_SPARKLE src/appcontroller.cpp    -I../include
+	$(CC) -Os -std:c++17 -EHsc -c -Iinclude -I/c/vcpkg/installed/x86-windows-static/include -I. -D_WIN32_WINNT=0x501 -DUNICODE -D_UNICODE -DBUILDING_WIN_SPARKLE src/dll_api.cpp          -I../include
+	$(CC) -Os -std:c++17 -EHsc -c -Iinclude -I/c/vcpkg/installed/x86-windows-static/include -I. -D_WIN32_WINNT=0x501 -DUNICODE -D_UNICODE -DBUILDING_WIN_SPARKLE src/dllmain.cpp          -I../include
+	$(CC) -Os -std:c++17 -EHsc -c -Iinclude -I/c/vcpkg/installed/x86-windows-static/include -I. -D_WIN32_WINNT=0x501 -DUNICODE -D_UNICODE -DBUILDING_WIN_SPARKLE src/download.cpp         -I../include
+	$(CC) -Os -std:c++17 -EHsc -c -Iinclude -I/c/vcpkg/installed/x86-windows-static/include -I. -D_WIN32_WINNT=0x501 -DUNICODE -D_UNICODE -DBUILDING_WIN_SPARKLE src/error.cpp            -I../include
+	$(CC) -Os -std:c++17 -EHsc -c -Iinclude -I/c/vcpkg/installed/x86-windows-static/include -I. -D_WIN32_WINNT=0x501 -DUNICODE -D_UNICODE -DBUILDING_WIN_SPARKLE src/settings.cpp         -I../include
+	$(CC) -Os -std:c++17 -EHsc -c -Iinclude -I/c/vcpkg/installed/x86-windows-static/include -I. -D_WIN32_WINNT=0x501 -DUNICODE -D_UNICODE -DBUILDING_WIN_SPARKLE src/signatureverifier.cpp -I../include
+	$(CC) -Os -std:c++17 -EHsc -c -Iinclude -I/c/vcpkg/installed/x86-windows-static/include -I. -D_WIN32_WINNT=0x501 -DUNICODE -D_UNICODE -DBUILDING_WIN_SPARKLE src/threads.cpp          -I../include
+	$(CC) -Os -std:c++17 -EHsc -c -Iinclude -I/c/vcpkg/installed/x86-windows-static/include -I. -D_WIN32_WINNT=0x501 -DUNICODE -D_UNICODE -DBUILDING_WIN_SPARKLE src/updatechecker.cpp    -I../include
+	$(CC) -Os -std:c++17 -EHsc -c -Iinclude -I/c/vcpkg/installed/x86-windows-static/include -I. -D_WIN32_WINNT=0x501 -DUNICODE -D_UNICODE -DBUILDING_WIN_SPARKLE src/ui.cpp               -I../include
+	$(CC) -Os -std:c++17 -EHsc -c -Iinclude -I/c/vcpkg/installed/x86-windows-static/include -I. -D_WIN32_WINNT=0x501 -DUNICODE -D_UNICODE -DBUILDING_WIN_SPARKLE src/updatedownloader.cpp -I../include
+
+static: objects
+	lib -out:WinSparkle.lib *.obj
+
+dll: objects translations.res winsparkle.res
+	link -out:winsparkle.dll *.obj translations.res winsparkle.res -def:WinSparkle.def -implib:winsparkle.dll.lib -libpath:"c:\vcpkg\installed\arm64-windows-static\lib" ed25519.lib libcrypto.lib wxbase33u.lib wxmsw33u_webview.lib wxmsw33u_core.lib wxbase33u_xml.lib wxmsw33u_html.lib wxbase33u.lib kernel32.lib ws2_32.lib gdi32.lib uxtheme.lib ole32.lib oleaut32.lib uuid.lib gdiplus.lib wininet.lib nanosvgrast.lib tiff.lib nanosvg.lib zlib.lib comctl32.lib libexpatMT.lib oleacc.lib winspool.lib msimg32.lib user32.lib comctl32.lib kernel32.lib user32.lib rpcrt4.lib version.lib wininet.lib shlwapi.lib shell32.lib libpng16.lib comdlg32.lib advapi32.lib crypt32.lib
