@@ -1,5 +1,6 @@
 LIBRARY WINSPARKLE.dll
 EXPORTS
+DllMain@12
 win_sparkle_init
 win_sparkle_cleanup
 win_sparkle_set_lang
