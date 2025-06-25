@@ -4,8 +4,8 @@ msgstr ""
 "POT-Creation-Date: 2019-10-06 14:19+0200\n"
 "PO-Revision-Date: 2025-06-24 15:52\n"
 "Last-Translator: Václav Slavík <vaclav@slavik.io>\n"
-"Language-Team: French\n"
-"Language: fr_FR\n"
+"Language-Team: Uzbek\n"
+"Language: uz_UZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,122 +17,122 @@ msgstr ""
 "X-Poedit-SearchPath-0: src\n"
 "X-Crowdin-Project: winsparkle\n"
 "X-Crowdin-Project-ID: 82678\n"
-"X-Crowdin-Language: fr\n"
+"X-Crowdin-Language: uz\n"
 "X-Crowdin-File: winsparkle.pot\n"
 "X-Crowdin-File-ID: 57\n"
 
 #: src/ui.cpp:325 src/ui.cpp:668 src/ui.cpp:684
 msgid "Software Update"
-msgstr "Mise à jour du logiciel"
+msgstr "Dasturni yangilash"
 
 #: src/ui.cpp:513
 msgid "Release notes:"
-msgstr "Notes de version :"
+msgstr "Nima yangi:"
 
 #: src/ui.cpp:539
 msgid "Skip this version"
-msgstr "Ignorer cette version"
+msgstr "Bu versiyani oʻtkazib yuborish"
 
 #: src/ui.cpp:545
 msgid "Remind me later"
-msgstr "Me le rappeler ultérieurement"
+msgstr "Keyinroq eslat"
 
 #: src/ui.cpp:550 src/ui.cpp:563
 msgid "Install update"
-msgstr "Installer la mise à jour"
+msgstr "Yangilanishni oʻrnatish"
 
 #: src/ui.cpp:667
 #, c-format
 msgid "%s cannot be restarted."
-msgstr "%s ne peut être redémarré."
+msgstr "%sʼni qayta ishga tushirish mumkin emas."
 
 #: src/ui.cpp:670
 msgid "Make sure that you don't have any unsaved documents and try again."
-msgstr "Assurez-vous que vos documents soient enregistrés et réessayez."
+msgstr "Saqlanmagan hujjatlaringiz yoʻqligiga ishonch hosil qiling va qayta urinib koʻring."
 
 #: src/ui.cpp:677
 msgid "Launching the installer..."
-msgstr "Démarrage du programme d'installation..."
+msgstr "Oʻrnatuvchi ishga tushirilmoqda..."
 
 #: src/ui.cpp:683
 msgid "Failed to launch the installer."
-msgstr "Impossible de démarrer le programme d'installation."
+msgstr "Oʻrnatuvchini ishga tushirib boʻlmadi."
 
 #: src/ui.cpp:726
 msgid "Checking for updates..."
-msgstr "Recherche de mises à jour..."
+msgstr "Yangilanishlar tekshirilmoqda..."
 
 #: src/ui.cpp:728 src/ui.cpp:809 src/ui.cpp:897
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "Bekor qilish"
 
 #: src/ui.cpp:754
 msgid "You're up to date!"
-msgstr "Le programme est à jour !"
+msgstr "Sizniki eng yangisi!"
 
 #: src/ui.cpp:761
 #, c-format
 msgid "%s %s is currently the newest version available."
-msgstr "%s %s est actuellement la version la plus récente disponible."
+msgstr "%s %s hozirda mavjud eng yangi versiya."
 
 #: src/ui.cpp:774
 msgid "Close"
-msgstr "Fermer"
+msgstr "Yopish"
 
 #: src/ui.cpp:795
 msgid "Update Error!"
-msgstr "Erreur lors de la mise à jour !"
+msgstr "Yangilanishda xatolik yuz berdi!"
 
 #: src/ui.cpp:801
 msgid "An error occurred in retrieving update information; are you connected to the internet? Please try again later."
-msgstr "Une erreur est survenue lors de la récupération des données de mise à jour. Êtes-vous connecté à internet ? Veuillez réessayer ultérieurement."
+msgstr "Yangilanish maʻlumotlarini olishda xatolik yuz berdi; internetga ulanganmisiz? Keyinroq qayta urinib koʻring."
 
 #: src/ui.cpp:804
 msgid "The update is improperly signed."
-msgstr "La mise à jour est incorrectement signée."
+msgstr "Yangilanish notoʻgʻri imzolangan."
 
 #: src/ui.cpp:855
 #, c-format
 msgid "A new version of %s is available!"
-msgstr "Une nouvelle version de %s est disponible !"
+msgstr "%s`ni yangi versiyasi mavjud!"
 
 #: src/ui.cpp:858
 msgid "Get update"
-msgstr "Mettre à jour"
+msgstr "Yangilanishni olish"
 
 #: src/ui.cpp:864
 #, c-format
 msgid "%s %s is now available (you have %s). Would you like to download it now?"
-msgstr "%s %s est disponible (vous possédez actuellement %s). Souhaitez-vous la télécharger maintenant ?"
+msgstr "%s %s oʻrnatsa boʻladi (sizda %s). Hozir yuklab olmoqchimisiz?"
 
 #: src/ui.cpp:895
 msgid "Downloading update..."
-msgstr "Téléchargement de la mise à jour..."
+msgstr "Yangilash yuklanmoqda..."
 
 #. TRANSLATORS: This is the progress of a download, e.g. "3 MB of 12 MB".
 #: src/ui.cpp:923
 #, c-format
 msgid "%s of %s"
-msgstr "%s de %s"
+msgstr "%s / %s"
 
 #: src/ui.cpp:960
 msgid "Ready to install."
-msgstr "Prête à être installée."
+msgstr "Oʻrnatishga tayyor."
 
 #: src/ui.cpp:1105
 msgid "Check for updates automatically?"
-msgstr "Vérification automatique des mises à jour ?"
+msgstr "Yangilanishlar avtomatik tekshirilsinmi?"
 
 #: src/ui.cpp:1115
 #, c-format
 msgid "Should %s automatically check for updates? You can always check for updates manually from the menu."
-msgstr "Souhaitez-vous que %s recherche automatiquement les mises à jours ? Vous pouvez le faire manuellement à partir du menu."
+msgstr "%s avtomatik tarzda yangilanishlarni tekshirsinmi? Yangilanishlarni oʻzingiz har doim menyudan tekshirisha olasiz."
 
 #: src/ui.cpp:1129
 msgid "Check automatically"
-msgstr "Vérifier automatiquement"
+msgstr "Avtomatik tekshirilsin"
 
 #: src/ui.cpp:1134
 msgid "Don't check"
-msgstr "Ne pas vérifier"
+msgstr "Tekshirilmasin"
 
