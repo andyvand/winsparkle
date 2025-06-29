@@ -7,9 +7,7 @@ CC = "c:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.
 all: static dll
 
 translations.res:
-	for file in translations/*.po  do\
-		msgfmt $$file -o "$${file/%po/mo}"  \
-	done
+	for file in translations/*.po; do msgfmt $$file -o "$${file/%po/mo}"; done
 	rc -fo translations.res translations/translations.rc
 
 winsparkle.res:
